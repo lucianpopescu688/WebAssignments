@@ -1,0 +1,137 @@
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(2012473-3020x1700-desktop-hd-better-call-saul-background-image.jpg), url(black-mirror-logo.jpg), url(45966-1999x1121-desktop-hd-inside-job-netflix-wallpaper.jpg), url(6d323519-d721-4d98-8c1d-be0145d858c1.avif);
+    background-position: top left, top right, bottom left, bottom right;
+    background-size: 50% 50%;
+    background-repeat: no-repeat;
+    font-family: Arial, sans-serif;
+}
+
+#open-dialog {
+    padding: 15px 30px;
+    font-size: 1.1em;
+    background-color: rgba(255, 255, 255, 0.9);
+    border: 2px solid #ffffff;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    color: #333;
+}
+
+#open-dialog:hover {
+    background-color: rgba(255, 255, 255, 1);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+#dialog {
+    display: none;
+    position: absolute;
+    background: rgba(255, 255, 255, 0.97);
+    border: 1px solid #ccc;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    min-width: 200px;
+    min-height: 150px;
+    z-index: 1000;
+    overflow: hidden;
+    backdrop-filter: blur(5px);
+    border-radius: 8px;
+}
+
+.dialog-header {
+    padding: 12px;
+    background: rgba(245, 245, 245, 0.9);
+    border-bottom: 1px solid #ddd;
+    cursor: move;
+    user-select: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.dialog-title {
+    font-weight: bold;
+    color: #333;
+    font-size: 1.2em;
+}
+
+.dialog-close {
+    cursor: pointer;
+    font-size: 24px;
+    line-height: 1;
+    padding: 0 8px;
+    color: #666;
+    transition: color 0.2s;
+}
+
+.dialog-close:hover {
+    color: #333;
+}
+
+.dialog-content {
+    padding: 20px;
+    overflow: auto;
+    box-sizing: border-box;
+    height: calc(100% - 45px);
+    color: #444;
+}
+
+.media-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.media-item {
+    padding: 12px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.media-item:last-child {
+    border-bottom: none;
+}
+
+.title {
+    font-weight: bold;
+    color: #2c3e50;
+    margin-bottom: 8px;
+}
+
+.details {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    font-size: 0.9em;
+    color: #7f8c8d;
+    margin-top: 5px;
+}
+
+.director::before {
+    content: "🎬 ";
+    opacity: 0.7;
+}
+
+.year::before {
+    content: "📅 ";
+    opacity: 0.7;
+}
+
+.resize-handle {
+    position: absolute;
+    background: transparent;
+    z-index: 2;
+}
+
+.resize-n { cursor: n-resize; top: 0; left: 5px; right: 5px; height: 5px; }
+.resize-s { cursor: s-resize; bottom: 0; left: 5px; right: 5px; height: 5px; }
+.resize-e { cursor: e-resize; top: 5px; right: 0; width: 5px; bottom: 5px; }
+.resize-w { cursor: w-resize; top: 5px; left: 0; width: 5px; bottom: 5px; }
+.resize-ne { cursor: ne-resize; top: 0; right: 0; width: 5px; height: 5px; }
+.resize-nw { cursor: nw-resize; top: 0; left: 0; width: 5px; height: 5px; }
+.resize-se { cursor: se-resize; bottom: 0; right: 0; width: 5px; height: 5px; }
+.resize-sw { cursor: sw-resize; bottom: 0; left: 0; width: 5px; height: 5px; }

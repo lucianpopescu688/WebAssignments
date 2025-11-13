@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cuphead - Ultimate Guide</title>
+    <link rel="stylesheet" href="DDM.css">
+    <script src="DDM.js"></script>
+</head>
+<body>
+    <div class="nav-wrapper">
+        <nav class="nav-container">
+            <!-- 1. Main Characters -->
+            <div class="nav-item" onmouseenter="showMenu('main-characters')" onmouseleave="hideMenu('main-characters')">
+                🥤 Main Characters
+                <div id="main-characters" class="dropdown-content">
+                    <div class="menu-item">
+                        <img src="Cuphead.webp" alt="Cuphead">
+                        <span class="menu-text">Cuphead</span>
+                    </div>
+                    <div class="menu-item">
+                        <img src="Mugman.webp" alt="Mugman">
+                        <span class="menu-text">Mugman</span>
+                    </div>
+                    <div class="menu-item">
+                        <img src="Chalice.png" alt="Chalice">
+                        <span class="menu-text">Ms. Chalice</span>
+                    </div>
+                    <div class="menu-item">
+                        <img src="Elderkettle.webp" alt="Elderkettle">
+                        <span class="menu-text">Elder Kettle</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 2. Walkthrough -->
+            <div class="nav-item" onmouseenter="showMenu('walkthrough')" onmouseleave="hideMenu('walkthrough')">
+                🗺️ Walkthrough
+                <div id="walkthrough" class="dropdown-content">
+                    <!-- Isle I -->
+                    <div class="menu-item">
+                        <img src="Inkwell_Isle_1.webp" alt="Isle I" class="isle-icon">
+                        <div class="menu-column">
+                            <span class="menu-text">Inkwell Isle I</span>
+                            <div class="sub-items">
+                                <div class="boss-item">
+                                    <img src="RootPack.webp" alt="Root Pack">
+                                    <span>The Root Pack</span>
+                                </div>
+                                <div class="boss-item">
+                                    <img src="GoopyLeGrande.webp" alt="Goopy">
+                                    <span>Goopy Le Grande</span>
+                                </div>
+                                <div class="boss-item">
+                                    <img src="HildaBerg.webp" alt="Hilda">
+                                    <span>Hilda Berg</span>
+                                </div>
+                                <div class="boss-item">
+                                    <img src="Ribby.webp".png" alt="Ribby">
+                                    <span>Ribby & Croaks</span>
+                                </div>
+                                <div class="boss-item">
+                                    <img src="Cagney.webp".png" alt="Cagney">
+                                    <span>Cagney Carnation</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Isle II -->
+                    <div class="menu-item">
+                        <img src="Inkwell-Isle-II-map.webp" alt="Isle II" class="isle-icon">
+                        <div class="menu-column">
+                            <span class="menu-text">Inkwell Isle II</span>
+                            <div class="sub-items">
+                                <div class="boss-item">
+                                    <img src="BaronessIcon.png" alt="Baroness">
+                                    <span>Baroness Von Bon Bon</span>
+                                </div>
+                                <div class="boss-item">
+                                    <img src="BeppiIcon1.png" alt="Beppi">
+                                    <span>Beppi the Clown</span>
+                                </div>
+                                <div class="boss-item">
+                                    <img src="DjimmiIcon5.png" alt="Djimmi">
+                                    <span>Djimmi the Great</span>
+                                </div>
+                                <div class="boss-item">
+                                    <img src="WallyIcon1.png" alt="Wally">
+                                    <span>Wally Warbles</span>
+                                </div>
+                                <div class="boss-item">
+                                    <img src="GrimPhase3Mugshot.png" alt="Grim">
+                                    <span>Grim Matchstick</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Isle III -->
+                    <div class="menu-item">
+                        <img src="Inkwell_Isle_Three.png" alt="Isle III" class="isle-icon">
+                        <div class="menu-column">
+                            <span class="menu-text">Inkwell Isle III</span>
+                            <div class="sub-items">
+                                <div class="boss-item">
+                                    <img src="HoneybottomsIcon1.png" alt="Rumor Honeybottoms">
+                                    <span>Rumor Honeybottoms</span>
+                                </div>
+
+                                <div class="boss-item">
+                                    <img src="BrineybeardIcon.png" alt="Captain Brineybeard">
+                                    <span>Captain Brineybeard</span>
+                                </div>
+
+                                <div class="boss-item">
+                                    <img src="SallyIcon1.png" alt="Sally Stageplay">
+                                    <span>Sally Stageplay</span>
+                                </div>
+                                <div class="boss-item">
+                                    <img src="KahlIcon3.png" alt="Dr. Kahl's Robot">
+                                    <span>Dr. Kahl's Robot</span>
+                                </div>
+                                <div class="boss-item">
+                                    <img src="CalaMariaIcon1.png" alt="Cala Maria">
+                                    <span>Cala Maria</span>
+                                </div>
+                                <div class="boss-item">
+                                    <img src="ExpressIcon4.png" alt="Phantom Express">
+                                    <span>Phantom Express</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Isle Hell -->
+                    <div class="menu-item">
+                        <img src="Ch-casino.jpg" alt="Isle Hell" class="isle-icon">
+                        <div class="menu-column">
+                            <span class="menu-text">Inkwell Hell</span>
+                            <div class="sub-items">
+                                <div class="boss-item">
+                                    <img src="KingDiceIcon.png" alt="King Dice">
+                                    <span>King Dice</span>
+                                </div>
+                                <div class="boss-item">
+                                    <img src="DevilIcon1.png" alt="The Devil">
+                                    <span>The Devil</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Isle IV -->
+                    <div class="menu-item">
+                        <img src="UpdatedDLCislandmap.png" alt="Isle IV" class="isle-icon">
+                        <div class="menu-column">
+                            <span class="menu-text">Inkwell Isle IV</span>
+                            <div class="sub-items">
+                                <div class="boss-item">
+                                    <img src="Death_card_mugshot_oldman_ph2.png" alt="Glumstone The Giant">
+                                    <span>Glumstone The Giant</span>
+                                </div>
+
+                                <div class="boss-item">
+                                    <img src="Death_card_mugshot_rumrunners_ph3.png" alt="Moonshine Mob">
+                                    <span>Moonshine Mob</span>
+                                </div>
+
+                                <div class="boss-item">
+                                    <img src="Death_card_mugshot_dogfight_ph3.png" alt="The Howling Aces">
+                                    <span>The Howling Aces</span>
+                                </div>
+                                <div class="boss-item">
+                                    <img src="Mortimer_Freeze_Phase1.png" alt="Mortimer Freeze">
+                                    <span>Mortimer Freeze</span>
+                                </div>
+                                <div class="boss-item">
+                                    <img src="Death_card_mugshot_cowgirl_ph2.png" alt="Esther Winchester">
+                                    <span>Esther Winchester</span>
+                                </div>
+                                <div class="boss-item">
+                                    <img src="Death_card_mugshot_saltbaker_ph1.png" alt="Chef Saltbaker">
+                                    <span>Chef Saltbaker</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 3. weapons -->
+            <div class="nav-item" onmouseenter="showMenu('weapons')" onmouseleave="hideMenu('weapons')">
+                💥 Weapons
+                <div id="weapons" class="dropdown-content">
+                    <div class="menu-item">
+                        <img src="PeashooterIcon.png" alt="Peashooter">
+                        <span class="menu-text">Peashooter</span>
+                    </div>
+                    <div class="menu-item">
+                        <img src="SpreadIcon.png" alt="Spread">
+                        <span class="menu-text">Spread</span>
+                    </div>
+                    <div class="menu-item">
+                        <img src="ChaserIcon.png" alt="Chaser">
+                        <span class="menu-text">Chaser</span>
+                    </div>
+                    <div class="menu-item">
+                        <img src="LobberIcon.png" alt="Lobber">
+                        <span class="menu-text">Lobber</span>
+                    </div>
+                    <div class="menu-item">
+                        <img src="ChargeIcon.png" alt="Charge">
+                        <span class="menu-text">Charge</span>
+                    </div>
+                    <div class="menu-item">
+                        <img src="RoundaboutIcon.png" alt="Roundabout">
+                        <span class="menu-text">Roundabout</span>
+                    </div>
+                    <div class="menu-item">
+                        <img src="CrackshotIcon.webp" alt="Crackshot">
+                        <span class="menu-text">Crackshot</span>
+                    </div>
+                    <div class="menu-item">
+                        <img src="ConvergeIcon.webp" alt="Converge">
+                        <span class="menu-text">Converge</span>
+                    </div>
+                    <div class="menu-item">
+                        <img src="TwistUpIcon.webp" alt="TwistUp">
+                        <span class="menu-text">Twist-Up</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 4. Charms -->
+            <div class="nav-item" onmouseenter="showMenu('charms')" onmouseleave="hideMenu('charms')">
+                🔮 Charms
+                <div id="charms" class="dropdown-content">
+                    <div class="menu-item">
+                        <img src="HeartIcon.webp" alt="Heart">
+                        <span class="menu-text">Heart</span>
+                    </div>
+                    <div class="menu-item">
+                        <img src="Smoke_Bomb.webp" alt="Smoke Bomb">
+                        <span class="menu-text">Smoke Bomb</span>
+                    </div>
+                    <div class="menu-item">
+                        <img src="PSugarIcon.webp" alt="PSugar">
+                        <span class="menu-text">Parry Sugar</span>
+                    </div>
+                    <div class="menu-item">
+                        <img src="CoffeeIcon.webp" alt="Coffee">
+                        <span class="menu-text">Coffee</span>
+                    </div>
+                    <div class="menu-item">
+                        <img src="TwinHeartIcon.webp" alt="Twin Heart">
+                        <span class="menu-text">Twin Heart</span>
+                    </div>
+                    <div class="menu-item">
+                        <img src="WhetstoneIcon.webp" alt="Whetstone">
+                        <span class="menu-text">Whetstone</span>
+                    </div>
+                    <div class="menu-item">
+                        <img src="AstralCookieIcon.png" alt="Astral Cookie">
+                        <span class="menu-text">Astral Cookie</span>
+                    </div>
+                    <div class="menu-item">
+                        <img src="HeartRingIcon.png" alt="Heart Ring">
+                        <span class="menu-text">Heart Ring</span>
+                    </div>
+                    <div class="menu-item">
+                        <img src="DivineRelicIcon.webp" alt="Divine Relic">
+                        <span class="menu-text">Divine Relic</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 5. Supers -->
+            <div class="nav-item" onmouseenter="showMenu('supers')" onmouseleave="hideMenu('supers')">
+                🌟 Supers
+                <div id="supers" class="dropdown-content">
+                    <div class="menu-item">
+                        <img src="Super1Cuphead.png" alt="Energy Beam">
+                        <span class="menu-text">Energy Beam</span>
+                    </div>
+                    <div class="menu-item">
+                        <img src="Super2Cuphead.png" alt="Invincibility">
+                        <span class="menu-text">Invincibility</span>
+                    </div>
+                    <div class="menu-item">
+                        <img src="Super3Cuphead.webp" alt="Giant Ghost">
+                        <span class="menu-text">Giant Ghost</span>
+                    </div>
+                    <div class="menu-item">
+                        <img src="Super1Chalice.jpg" alt="Spiral Pillar">
+                        <span class="menu-text">Spiral Pillar</span>
+                    </div>
+                    <div class="menu-item">
+                        <img src="Super2Chalice.webp" alt="Shield Pal">
+                        <span class="menu-text">Shield Pal</span>
+                    </div>
+                    <div class="menu-item">
+                        <img src="Super3Chalice.webp" alt="Ghostly Barrage">
+                        <span class="menu-text">Ghostly Barrage</span>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+</body>
+</html>

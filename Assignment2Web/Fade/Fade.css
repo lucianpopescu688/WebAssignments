@@ -1,0 +1,63 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: black;
+}
+
+.firstDiv, .secondDiv, .thirdDiv, .fourthDiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.firstDiv {
+    width: 400px;
+    height: 400px;
+    background-color: #333333;
+    align-items: center;
+
+}
+
+.secondDiv {
+    width: 300px;
+    height: 300px;
+    background-color: grey;
+    align-items: center;
+}
+
+.thirdDiv {
+    width: 200px;
+    height: 200px;
+    background-color: #cccccc;
+    align-items: center;
+}
+
+.fourthDiv {
+    width: 100px;
+    height: 100px;
+    background-color: white;
+    align-items: center;
+}
+
+
+body:has(.fourthDiv:hover) {
+    background-color: #0d1473; 
+}
+
+.firstDiv:has(.thirdDiv:hover) {
+    background-color: #00caeb; 
+}
+
+.secondDiv:has(.fourthDiv:hover) {
+    background-color: #6627d5;
+}
+
+.thirdDiv:has(.fourthDiv:hover) {
+    background-color: #f600fd;
+}
+
+.fourthDiv:hover {
+    background-color: #f5bae4;
+}

@@ -1,0 +1,1845 @@
+============================================ 
+FILE: C:\Users\lucia\Desktop\WebProgramming\Assignment6Web\assets\css\style.css 
+============================================ 
+/* Basic CSS for E-Commerce Store */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 1rem 0;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.logo a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin-left: 20px;
+    position: relative;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    color: #ddd;
+}
+
+/* Dropdown */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: #333;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Main Content */
+main {
+    padding: 2rem 0;
+    min-height: calc(100vh - 130px);
+}
+
+.page-title {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+/* ProductsComponent Grid */
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    margin-bottom: 2rem;
+}
+
+.product-card {
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    padding: 1rem;
+    transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+}
+
+.product-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+}
+
+.product-card h3 {
+    margin-bottom: 0.5rem;
+}
+
+.product-card .price {
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+.product-card .category {
+    font-size: 0.8rem;
+    color: #777;
+    margin-bottom: 1rem;
+}
+
+.btn {
+    display: inline-block;
+    background: #333;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+.btn:hover {
+    background: #555;
+}
+
+/* Pagination */
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin: 2rem 0;
+}
+
+.pagination a {
+    color: #333;
+    padding: 8px 16px;
+    text-decoration: none;
+    border: 1px solid #ddd;
+    margin: 0 4px;
+}
+
+.pagination a.active {
+    background-color: #333;
+    color: white;
+    border: 1px solid #333;
+}
+
+.pagination a:hover:not(.active) {
+    background-color: #ddd;
+}
+
+/* Product Details */
+.product-details {
+    display: flex;
+    max-width: 1000px;
+    margin: 0 auto;
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    overflow: hidden;
+}
+
+.product-image {
+    flex: 1;
+    padding: 2rem;
+}
+
+.product-image img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.product-info {
+    flex: 1;
+    padding: 2rem;
+}
+
+.product-info h1 {
+    margin-bottom: 1rem;
+}
+
+.product-info .price {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.product-info .description {
+    margin-bottom: 2rem;
+}
+
+.quantity-input {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.quantity-input input {
+    width: 60px;
+    padding: 0.5rem;
+    margin: 0 0.5rem;
+    text-align: center;
+}
+
+/* Cart */
+.cart-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 2rem;
+}
+
+.cart-table th, .cart-table td {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.cart-table th {
+    background-color: #f4f4f4;
+}
+
+.cart-table img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.cart-total {
+    text-align: right;
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.cart-buttons {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Search Form */
+.search-form {
+    margin-bottom: 2rem;
+    display: flex;
+}
+
+.search-form input[type="text"] {
+    padding: 0.5rem;
+    width: 100%;
+    border: 1px solid #ddd;
+    border-radius: 5px 0 0 5px;
+}
+
+.search-form button {
+    padding: 0.5rem 1rem;
+    background: #333;
+    color: #fff;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+}
+
+/* Category Filter */
+.category-filter {
+    margin-bottom: 2rem;
+}
+
+.category-filter select {
+    padding: 0.5rem;
+    width: 100%;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+/* Message Alerts */
+.alert {
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 5px;
+}
+
+.alert-success {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.alert-danger {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+/* Forms */
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.form-group input, .form-group textarea, .form-group select {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    overflow: auto;
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 10% auto;
+    padding: 2rem;
+    border-radius: 5px;
+    max-width: 500px;
+    position: relative;
+}
+
+.close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .product-details {
+        flex-direction: column;
+    }
+    
+    .products-grid {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+}
+ 
+============================================ 
+FILE: C:\Users\lucia\Desktop\WebProgramming\Assignment6Web\cart.php 
+============================================ 
+<?php
+// Cart page
+require_once 'includes/header.php';
+
+// Initialize cart
+$cart = new Cart();
+$cartItems = $cart->getCartItems();
+$cartTotal = $cart->getCartTotal();
+?>
+
+<div class="container">
+    <h1 class="page-title">Your Shopping Cart</h1>
+    
+    <div class="cart-container">
+        <?php if(count($cartItems) > 0): ?>
+            <table class="cart-table">
+                <thead>
+                    <tr>
+                        <th>Image</th>
+                        <th>Product</th>
+                        <th>Price</th>
+                        <th>Quantity</th>
+                        <th>Subtotal</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <?php foreach($cartItems as $item): ?>
+                        <tr data-id="<?php echo $item->id; ?>">
+                            <td>
+                                <img src="<?php echo htmlspecialchars($item->image_url); ?>" alt="<?php echo htmlspecialchars($item->name); ?>">
+                            </td>
+                            <td>
+                                <a href="product_details.php?id=<?php echo $item->product_id; ?>">
+                                    <?php echo htmlspecialchars($item->name); ?>
+                                </a>
+                            </td>
+                            <td class="price" data-price="<?php echo $item->price; ?>">
+                                $<?php echo number_format($item->price, 2); ?>
+                            </td>
+                            <td>
+                                <div class="quantity-input">
+                                    <button onclick="decrementQuantity('#cart-quantity-<?php echo $item->id; ?>')" type="button">-</button>
+                                    <input type="number" id="cart-quantity-<?php echo $item->id; ?>" min="1" value="<?php echo $item->quantity; ?>">
+                                    <button onclick="incrementQuantity('#cart-quantity-<?php echo $item->id; ?>')" type="button">+</button>
+                                    <button class="update-quantity" data-id="<?php echo $item->id; ?>">Update</button>
+                                </div>
+                            </td>
+                            <td class="subtotal">
+                                $<?php echo number_format($item->subtotal, 2); ?>
+                            </td>
+                            <td>
+                                <button class="btn remove-from-cart" data-id="<?php echo $item->id; ?>">Remove</button>
+                            </td>
+                        </tr>
+                    <?php endforeach; ?>
+                </tbody>
+            </table>
+            
+            <div class="cart-total">
+                <p>Total: <span>$<?php echo number_format($cartTotal, 2); ?></span></p>
+            </div>
+            
+            <div class="cart-actions">
+                <button id="clear-cart" class="btn">Clear Cart</button>
+                <a href="checkout.php" class="btn">Proceed to CheckoutComponent</a>
+            </div>
+        <?php else: ?>
+            <div class="alert alert-info">Your cart is empty.</div>
+            <a href="products.php" class="btn">Continue Shopping</a>
+        <?php endif; ?>
+    </div>
+</div>
+
+<script>
+function decrementQuantity(inputId) {
+    const input = document.querySelector(inputId);
+    const value = parseInt(input.value);
+    if (value > 1) {
+        input.value = value - 1;
+    }
+}
+
+function incrementQuantity(inputId) {
+    const input = document.querySelector(inputId);
+    const value = parseInt(input.value);
+    input.value = value + 1;
+}
+</script>
+
+<?php require_once 'includes/footer.php'; ?>
+ 
+============================================ 
+FILE: C:\Users\lucia\Desktop\WebProgramming\Assignment6Web\checkout.php 
+============================================ 
+<?php
+// CheckoutComponent page
+require_once 'includes/header.php';
+
+// Initialize cart
+$cart = new Cart();
+$cartItems = $cart->getCartItems();
+$cartTotal = $cart->getCartTotal();
+
+// Check if cart is empty
+if(count($cartItems) === 0) {
+    header('Location: cart.php');
+    exit;
+}
+
+// Process form submission
+$errors = [];
+$success = false;
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    // Validate form fields
+    $name = trim($_POST['name'] ?? '');
+    $email = trim($_POST['email'] ?? '');
+    $address = trim($_POST['address'] ?? '');
+    $city = trim($_POST['city'] ?? '');
+    $zip = trim($_POST['zip'] ?? '');
+    $payment_method = $_POST['payment_method'] ?? '';
+    
+    // Basic validation
+    if (empty($name)) {
+        $errors['name'] = 'Name is required';
+    }
+    
+    if (empty($email)) {
+        $errors['email'] = 'Email is required';
+    } elseif (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+        $errors['email'] = 'Invalid email format';
+    }
+    
+    if (empty($address)) {
+        $errors['address'] = 'Address is required';
+    }
+    
+    if (empty($city)) {
+        $errors['city'] = 'City is required';
+    }
+    
+    if (empty($zip)) {
+        $errors['zip'] = 'ZIP code is required';
+    }
+    
+    if (empty($payment_method)) {
+        $errors['payment_method'] = 'Payment method is required';
+    }
+    
+    // If no errors, process the order
+    if (empty($errors)) {
+        // Here you would typically:
+        // 1. Create an order record in the database
+        // 2. Transfer cart items to order_items table
+        // 3. Clear the cart
+        // 4. Send confirmation email
+        // 5. Redirect to confirmation page
+        
+        // For demo purposes, just clear the cart and show success message
+        $cart->clearCart();
+        $success = true;
+    }
+}
+?>
+
+<div class="container">
+    <h1 class="page-title">CheckoutComponent</h1>
+    
+    <?php if ($success): ?>
+        <div class="alert alert-success">
+            <h2>Thank you for your order!</h2>
+            <p>Your order has been placed successfully. You will receive a confirmation email shortly.</p>
+            <a href="products.php" class="btn">Continue Shopping</a>
+        </div>
+    <?php else: ?>
+        <div class="checkout-container">
+            <div class="order-summary">
+                <h2>Order Summary</h2>
+                <table class="cart-table">
+                    <thead>
+                        <tr>
+                            <th>Product</th>
+                            <th>Price</th>
+                            <th>Quantity</th>
+                            <th>Subtotal</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <?php foreach($cartItems as $item): ?>
+                            <tr>
+                                <td><?php echo htmlspecialchars($item->name); ?></td>
+                                <td>$<?php echo number_format($item->price, 2); ?></td>
+                                <td><?php echo $item->quantity; ?></td>
+                                <td>$<?php echo number_format($item->subtotal, 2); ?></td>
+                            </tr>
+                        <?php endforeach; ?>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td colspan="3"><strong>Total</strong></td>
+                            <td><strong>$<?php echo number_format($cartTotal, 2); ?></strong></td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+            
+            <div class="checkout-form">
+                <h2>Shipping & Payment Information</h2>
+                
+                <?php if (!empty($errors)): ?>
+                    <div class="alert alert-danger">
+                        <p>Please correct the following errors:</p>
+                        <ul>
+                            <?php foreach($errors as $error): ?>
+                                <li><?php echo $error; ?></li>
+                            <?php endforeach; ?>
+                        </ul>
+                    </div>
+                <?php endif; ?>
+                
+                <form method="POST" action="checkout.php">
+                    <div class="form-group">
+                        <label for="name">Full Name:</label>
+                        <input type="text" id="name" name="name" value="<?php echo isset($_POST['name']) ? htmlspecialchars($_POST['name']) : ''; ?>" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email Address:</label>
+                        <input type="email" id="email" name="email" value="<?php echo isset($_POST['email']) ? htmlspecialchars($_POST['email']) : ''; ?>" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="address">Address:</label>
+                        <input type="text" id="address" name="address" value="<?php echo isset($_POST['address']) ? htmlspecialchars($_POST['address']) : ''; ?>" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="city">City:</label>
+                        <input type="text" id="city" name="city" value="<?php echo isset($_POST['city']) ? htmlspecialchars($_POST['city']) : ''; ?>" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="zip">ZIP Code:</label>
+                        <input type="text" id="zip" name="zip" value="<?php echo isset($_POST['zip']) ? htmlspecialchars($_POST['zip']) : ''; ?>" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Payment Method:</label>
+                        <div class="payment-methods">
+                            <label>
+                                <input type="radio" name="payment_method" value="credit_card" <?php echo (isset($_POST['payment_method']) && $_POST['payment_method'] === 'credit_card') ? 'checked' : ''; ?> required>
+                                Credit Card
+                            </label>
+                            <label>
+                                <input type="radio" name="payment_method" value="paypal" <?php echo (isset($_POST['payment_method']) && $_POST['payment_method'] === 'paypal') ? 'checked' : ''; ?>>
+                                PayPal
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <div class="form-actions">
+                        <a href="cart.php" class="btn">Back to Cart</a>
+                        <button type="submit" class="btn">Place Order</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    <?php endif; ?>
+</div>
+
+<?php require_once 'includes/footer.php'; ?>
+ 
+============================================ 
+FILE: C:\Users\lucia\Desktop\WebProgramming\Assignment6Web\index.php 
+============================================ 
+<?php include 'includes/header.php'; ?>
+<div class="container">
+    <h1>Our ProductsComponent</h1>
+    <div class="category-filter">
+        <select id="categorySelect" onchange="loadProducts()">
+            <option value="0">All Categories</option>
+            <?php
+            $category = new Category();
+            foreach ($category->getAllCategories() as $cat): ?>
+            <option value="<?= $cat['category_id'] ?>"><?= htmlspecialchars($cat['name']) ?></option>
+            <?php endforeach; ?>
+        </select>
+    </div>
+    <div id="productsContainer"></div>
+    <div class="pagination">
+        <button onclick="changePage(-1)">Previous</button>
+        <span id="currentPage">1</span>
+        <button onclick="changePage(1)">Next</button>
+    </div>
+</div>
+<script src="js/script.js"></script>
+<?php include 'includes/footer.php'; ?> 
+============================================ 
+FILE: C:\Users\lucia\Desktop\WebProgramming\Assignment6Web\product.php 
+============================================ 
+<?php
+include 'includes/header.php';
+$productId = $_GET['id'] ?? 0;
+$product = (new Product())->getProductById($productId);
+if (!$product) { header("Location: index.php"); exit; }
+?>
+<div class="container">
+    <h1><?= htmlspecialchars($product['name']) ?></h1>
+    <p><?= htmlspecialchars($product['description']) ?></p>
+    <p>Price: $<?= number_format($product['price'], 2) ?></p>
+    <button onclick="addToCart(<?= $productId ?>)">Add to Cart</button>
+</div>
+<?php include 'includes/footer.php'; ?> 
+============================================ 
+FILE: C:\Users\lucia\Desktop\WebProgramming\Assignment6Web\products.php 
+============================================ 
+<?php
+// ProductsComponent listing page
+require_once 'includes/header.php';
+
+// Get current page number
+$page = isset($_GET['page']) ? (int)$_GET['page'] : 1;
+$perPage = 4; // 4 products per page as required
+
+// Initialize product class
+$product = new Product();
+
+// Check if category filter is applied
+if (isset($_GET['category']) && !empty($_GET['category'])) {
+    $categoryId = (int)$_GET['category'];
+    $categoryObj = $category->getCategoryById($categoryId);
+    $products = $product->getProductsByCategory($categoryId, $page, $perPage);
+    $totalProducts = $product->getTotalProductsByCategory($categoryId);
+    $pageTitle = "ProductsComponent in " . htmlspecialchars($categoryObj->name);
+} else if (isset($_GET['search']) && !empty($_GET['search'])) {
+    // Handle search
+    $keyword = $_GET['search'];
+    $products = $product->searchProducts($keyword, $page, $perPage);
+    $totalProducts = $product->getTotalSearchResults($keyword);
+    $pageTitle = "Search Results for: " . htmlspecialchars($keyword);
+} else {
+    // Get all products with pagination
+    $products = $product->getProducts($page, $perPage);
+    $totalProducts = $product->getTotalProducts();
+    $pageTitle = "All ProductsComponent";
+}
+
+$totalPages = ceil($totalProducts / $perPage);
+?>
+
+<div class="container">
+    <h1 class="page-title"><?php echo $pageTitle; ?></h1>
+    
+    <div class="row">
+        <!-- Category filter -->
+        <div class="category-filter">
+            <form method="GET" action="products.php">
+                <select name="category" id="category-filter">
+                    <option value="">All Categories</option>
+                    <?php foreach($categories as $cat): ?>
+                        <option value="<?php echo $cat->id; ?>" <?php echo (isset($_GET['category']) && $_GET['category'] == $cat->id) ? 'selected' : ''; ?>>
+                            <?php echo htmlspecialchars($cat->name); ?>
+                        </option>
+                    <?php endforeach; ?>
+                </select>
+            </form>
+        </div>
+        
+        <!-- Search form -->
+        <div class="search-form">
+            <form method="GET" action="products.php">
+                <input type="text" name="search" placeholder="Search products..." value="<?php echo isset($_GET['search']) ? htmlspecialchars($_GET['search']) : ''; ?>">
+                <button type="submit">Search</button>
+            </form>
+        </div>
+    </div>
+    
+    <!-- ProductsComponent container - will be updated via AJAX -->
+    <div class="products-container">
+        <?php include 'includes/products_grid.php'; ?>
+    </div>
+</div>
+
+<?php require_once 'includes/footer.php'; ?>
+ 
+============================================ 
+FILE: C:\Users\lucia\Desktop\WebProgramming\Assignment6Web\product_details.php 
+============================================ 
+<?php
+// Product details page
+require_once 'includes/header.php';
+
+// Check if ID parameter exists
+if(!isset($_GET['id'])) {
+    header('Location: products.php');
+    exit;
+}
+
+$id = (int)$_GET['id'];
+
+// Initialize product class
+$product = new Product();
+$productDetails = $product->getProductById($id);
+
+// Check if product exists
+if(!$productDetails) {
+    header('Location: products.php');
+    exit;
+}
+?>
+
+<div class="container">
+    <div class="product-details">
+        <div class="product-image">
+            <img src="<?php echo htmlspecialchars($productDetails->image_url); ?>" alt="<?php echo htmlspecialchars($productDetails->name); ?>">
+        </div>
+        <div class="product-info">
+            <h1><?php echo htmlspecialchars($productDetails->name); ?></h1>
+            <p class="price">$<?php echo number_format($productDetails->price, 2); ?></p>
+            <p class="category">Category: <?php echo htmlspecialchars($productDetails->category_name); ?></p>
+            <p class="description"><?php echo htmlspecialchars($productDetails->description); ?></p>
+            <p class="stock">In Stock: <?php echo $productDetails->stock; ?></p>
+            
+            <div class="quantity-input">
+                <label for="quantity-<?php echo $productDetails->id; ?>">Quantity:</label>
+                <button onclick="decrementQuantity('#quantity-<?php echo $productDetails->id; ?>')" type="button">-</button>
+                <input type="number" id="quantity-<?php echo $productDetails->id; ?>" min="1" max="<?php echo $productDetails->stock; ?>" value="1">
+                <button onclick="incrementQuantity('#quantity-<?php echo $productDetails->id; ?>')" type="button">+</button>
+            </div>
+            
+            <button class="btn add-to-cart" data-id="<?php echo $productDetails->id; ?>">Add to Cart</button>
+            <a href="products.php" class="btn">Back to ProductsComponent</a>
+        </div>
+    </div>
+</div>
+
+<script>
+function decrementQuantity(inputId) {
+    const input = document.querySelector(inputId);
+    const value = parseInt(input.value);
+    if (value > 1) {
+        input.value = value - 1;
+    }
+}
+
+function incrementQuantity(inputId) {
+    const input = document.querySelector(inputId);
+    const value = parseInt(input.value);
+    const max = parseInt(input.getAttribute('max'));
+    if (value < max) {
+        input.value = value + 1;
+    }
+}
+</script>
+
+<?php require_once 'includes/footer.php'; ?>
+ 
+============================================ 
+FILE: C:\Users\lucia\Desktop\WebProgramming\Assignment6Web\api\cart.php 
+============================================ 
+<?php
+// API endpoint for cart operations
+require_once '../config/database.php';
+require_once '../classes/Database.php';
+require_once '../classes/Cart.php';
+
+// Start session if not already started
+if (session_status() == PHP_SESSION_NONE) {
+    session_start();
+}
+
+// Initialize cart class
+$cart = new Cart();
+
+// Handle GET requests
+if ($_SERVER['REQUEST_METHOD'] === 'GET') {
+    // Get cart count
+    if (isset($_GET['action']) && $_GET['action'] === 'count') {
+        $count = $cart->getCartItemCount();
+        header('Content-Type: application/json');
+        echo json_encode(['count' => $count]);
+        exit;
+    }
+    
+    // Get cart total
+    if (isset($_GET['action']) && $_GET['action'] === 'total') {
+        $total = $cart->getCartTotal();
+        header('Content-Type: application/json');
+        echo json_encode(['total' => $total]);
+        exit;
+    }
+    
+    // Get cart items
+    $cartItems = $cart->getCartItems();
+    header('Content-Type: application/json');
+    echo json_encode($cartItems);
+    exit;
+}
+
+// Handle POST requests
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $action = $_POST['action'] ?? '';
+    
+    // Add item to cart
+    if ($action === 'add' && isset($_POST['product_id'])) {
+        $productId = (int)$_POST['product_id'];
+        $quantity = isset($_POST['quantity']) ? (int)$_POST['quantity'] : 1;
+        
+        $success = $cart->addToCart($productId, $quantity);
+        header('Content-Type: application/json');
+        echo json_encode(['success' => $success]);
+        exit;
+    }
+    
+    // Remove item from cart
+    if ($action === 'remove' && isset($_POST['cart_item_id'])) {
+        $cartItemId = (int)$_POST['cart_item_id'];
+        $success = $cart->removeFromCart($cartItemId);
+        header('Content-Type: application/json');
+        echo json_encode(['success' => $success]);
+        exit;
+    }
+    
+    // Update cart item quantity
+    if ($action === 'update' && isset($_POST['cart_item_id']) && isset($_POST['quantity'])) {
+        $cartItemId = (int)$_POST['cart_item_id'];
+        $quantity = (int)$_POST['quantity'];
+        $success = $cart->updateCartItem($cartItemId, $quantity);
+        header('Content-Type: application/json');
+        echo json_encode(['success' => $success]);
+        exit;
+    }
+    
+    // Clear cart
+    if ($action === 'clear') {
+        $success = $cart->clearCart();
+        header('Content-Type: application/json');
+        echo json_encode(['success' => $success]);
+        exit;
+    }
+}
+
+// If no valid request is made
+header('HTTP/1.1 400 Bad Request');
+echo json_encode(['error' => 'Invalid request']);
+exit;
+ 
+============================================ 
+FILE: C:\Users\lucia\Desktop\WebProgramming\Assignment6Web\api\categories.php 
+============================================ 
+<?php
+// API endpoint for categories
+require_once '../config/database.php';
+require_once '../classes/Database.php';
+require_once '../classes/Category.php';
+
+// Initialize category class
+$category = new Category();
+
+// Handle GET requests to fetch all categories
+if ($_SERVER['REQUEST_METHOD'] === 'GET') {
+    $categories = $category->getCategories();
+    
+    // Return JSON response
+    header('Content-Type: application/json');
+    echo json_encode($categories);
+    exit;
+}
+
+// If no valid request is made
+header('HTTP/1.1 400 Bad Request');
+echo json_encode(['error' => 'Invalid request']);
+exit;
+ 
+============================================ 
+FILE: C:\Users\lucia\Desktop\WebProgramming\Assignment6Web\api\get_products.php 
+============================================ 
+<?php
+require_once '../includes/db.php';
+require_once '../includes/Product.class.php';
+
+header('Content-Type: application/json');
+
+$categoryId = $_GET['category_id'] ?? 0;
+$page = $_GET['page'] ?? 1;
+$perPage = 4;
+
+$product = new Product();
+$products = $categoryId > 0 
+    ? $product->getProductsByCategory($categoryId, $page, $perPage)
+    : $product->getAllProducts($page, $perPage);
+
+$totalProducts = $product->getTotalProducts($categoryId);
+$totalPages = ceil($totalProducts / $perPage);
+
+echo json_encode([
+    'products' => $products,
+    'totalPages' => $totalPages,
+    'currentPage' => $page
+]);
+?> 
+============================================ 
+FILE: C:\Users\lucia\Desktop\WebProgramming\Assignment6Web\api\products.php 
+============================================ 
+<?php
+// API endpoint for products
+require_once '../config/database.php';
+require_once '../classes/Database.php';
+require_once '../classes/Product.php';
+require_once '../classes/Category.php';
+
+// Initialize product class
+$product = new Product();
+$category = new Category();
+
+// Handle GET requests
+if ($_SERVER['REQUEST_METHOD'] === 'GET') {
+    $page = isset($_GET['page']) ? (int)$_GET['page'] : 1;
+    $perPage = 4; // 4 products per page as required
+    
+    // Check if category filter is applied
+    if (isset($_GET['category']) && !empty($_GET['category'])) {
+        $categoryId = (int)$_GET['category'];
+        $categoryObj = $category->getCategoryById($categoryId);
+        $products = $product->getProductsByCategory($categoryId, $page, $perPage);
+        $totalProducts = $product->getTotalProductsByCategory($categoryId);
+    } else {
+        // Get all products with pagination
+        $products = $product->getProducts($page, $perPage);
+        $totalProducts = $product->getTotalProducts();
+    }
+    
+    $totalPages = ceil($totalProducts / $perPage);
+    
+    // Include the products HTML to be inserted via AJAX
+    include '../includes/products_grid.php';
+    exit;
+}
+
+// Handle search requests
+if (isset($_GET['search']) && !empty($_GET['search'])) {
+    $keyword = $_GET['search'];
+    $page = isset($_GET['page']) ? (int)$_GET['page'] : 1;
+    $perPage = 4;
+    
+    $products = $product->searchProducts($keyword, $page, $perPage);
+    $totalProducts = $product->getTotalSearchResults($keyword);
+    $totalPages = ceil($totalProducts / $perPage);
+    
+    // Include the products HTML to be inserted via AJAX
+    include '../includes/products_grid.php';
+    exit;
+}
+
+// If no valid request is made
+header('HTTP/1.1 400 Bad Request');
+echo json_encode(['error' => 'Invalid request']);
+exit;
+ 
+============================================ 
+FILE: C:\Users\lucia\Desktop\WebProgramming\Assignment6Web\classes\Cart.php 
+============================================ 
+<?php
+class Cart {
+    private $db;
+    
+    public function __construct() {
+        $this->db = new Database();
+        
+        // Start session if not already started
+        if (session_status() == PHP_SESSION_NONE) {
+            session_start();
+        }
+    }
+    
+    // Get cart items for current session
+    public function getCartItems() {
+        $sessionId = session_id();
+        
+        $this->db->query('SELECT ci.*, p.name, p.price, p.image_url, (p.price * ci.quantity) as subtotal 
+                          FROM cart_items ci 
+                          JOIN products p ON ci.product_id = p.id 
+                          WHERE ci.session_id = :session_id');
+        
+        $this->db->bind(':session_id', $sessionId);
+        return $this->db->resultSet();
+    }
+    
+    // Add item to cart
+    public function addToCart($productId, $quantity = 1) {
+        $sessionId = session_id();
+        
+        // Check if the product already exists in the cart
+        $this->db->query('SELECT * FROM cart_items 
+                          WHERE session_id = :session_id AND product_id = :product_id');
+        
+        $this->db->bind(':session_id', $sessionId);
+        $this->db->bind(':product_id', $productId);
+        
+        $item = $this->db->single();
+        
+        if($item) {
+            // Update quantity if product already in cart
+            $this->db->query('UPDATE cart_items 
+                              SET quantity = quantity + :quantity 
+                              WHERE session_id = :session_id AND product_id = :product_id');
+            
+            $this->db->bind(':session_id', $sessionId);
+            $this->db->bind(':product_id', $productId);
+            $this->db->bind(':quantity', $quantity);
+        } else {
+            // Add new item to cart
+            $this->db->query('INSERT INTO cart_items (session_id, product_id, quantity) 
+                              VALUES (:session_id, :product_id, :quantity)');
+            
+            $this->db->bind(':session_id', $sessionId);
+            $this->db->bind(':product_id', $productId);
+            $this->db->bind(':quantity', $quantity);
+        }
+        
+        // Execute
+        if($this->db->execute()) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+    
+    // Update cart item quantity
+    public function updateCartItem($cartItemId, $quantity) {
+        $sessionId = session_id();
+        
+        $this->db->query('UPDATE cart_items 
+                          SET quantity = :quantity 
+                          WHERE id = :id AND session_id = :session_id');
+        
+        $this->db->bind(':id', $cartItemId);
+        $this->db->bind(':session_id', $sessionId);
+        $this->db->bind(':quantity', $quantity);
+        
+        // Execute
+        if($this->db->execute()) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+    
+    // Remove item from cart
+    public function removeFromCart($cartItemId) {
+        $sessionId = session_id();
+        
+        $this->db->query('DELETE FROM cart_items 
+                          WHERE id = :id AND session_id = :session_id');
+        
+        $this->db->bind(':id', $cartItemId);
+        $this->db->bind(':session_id', $sessionId);
+        
+        // Execute
+        if($this->db->execute()) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+    
+    // Clear cart
+    public function clearCart() {
+        $sessionId = session_id();
+        
+        $this->db->query('DELETE FROM cart_items WHERE session_id = :session_id');
+        $this->db->bind(':session_id', $sessionId);
+        
+        // Execute
+        if($this->db->execute()) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+    
+    // Get cart total
+    public function getCartTotal() {
+        $sessionId = session_id();
+        
+        $this->db->query('SELECT SUM(p.price * ci.quantity) as total 
+                          FROM cart_items ci 
+                          JOIN products p ON ci.product_id = p.id 
+                          WHERE ci.session_id = :session_id');
+        
+        $this->db->bind(':session_id', $sessionId);
+        $result = $this->db->single();
+        
+        return $result->total ?? 0;
+    }
+    
+    // Get cart item count
+    public function getCartItemCount() {
+        $sessionId = session_id();
+        
+        $this->db->query('SELECT COUNT(*) as count FROM cart_items WHERE session_id = :session_id');
+        $this->db->bind(':session_id', $sessionId);
+        $result = $this->db->single();
+        
+        return $result->count ?? 0;
+    }
+}
+ 
+============================================ 
+FILE: C:\Users\lucia\Desktop\WebProgramming\Assignment6Web\classes\Category.php 
+============================================ 
+<?php
+class Category {
+    private $db;
+    
+    public function __construct() {
+        $this->db = new Database();
+    }
+    
+    // Get all categories
+    public function getCategories() {
+        $this->db->query('SELECT * FROM categories ORDER BY name');
+        return $this->db->resultSet();
+    }
+    
+    // Get category by ID
+    public function getCategoryById($id) {
+        $this->db->query('SELECT * FROM categories WHERE id = :id');
+        $this->db->bind(':id', $id);
+        return $this->db->single();
+    }
+    
+    // Add category
+    public function addCategory($data) {
+        $this->db->query('INSERT INTO categories (name, description) VALUES (:name, :description)');
+        // Bind values
+        $this->db->bind(':name', $data['name']);
+        $this->db->bind(':description', $data['description']);
+        
+        // Execute
+        if($this->db->execute()) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+    
+    // Update category
+    public function updateCategory($data) {
+        $this->db->query('UPDATE categories SET name = :name, description = :description WHERE id = :id');
+        // Bind values
+        $this->db->bind(':id', $data['id']);
+        $this->db->bind(':name', $data['name']);
+        $this->db->bind(':description', $data['description']);
+        
+        // Execute
+        if($this->db->execute()) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+    
+    // Delete category
+    public function deleteCategory($id) {
+        $this->db->query('DELETE FROM categories WHERE id = :id');
+        // Bind values
+        $this->db->bind(':id', $id);
+        
+        // Execute
+        if($this->db->execute()) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+}
+ 
+============================================ 
+FILE: C:\Users\lucia\Desktop\WebProgramming\Assignment6Web\classes\Database.php 
+============================================ 
+<?php
+class Database {
+    private $host = DB_HOST;
+    private $user = DB_USER;
+    private $pass = DB_PASS;
+    private $dbname = DB_NAME;
+    
+    private $conn;
+    private $stmt;
+    private $error;
+    
+    public function __construct() {
+        // Set DSN (Data Source Name)
+        $dsn = 'mysql:host=' . $this->host . ';dbname=' . $this->dbname;
+        
+        // Set options for PDO
+        $options = array(
+            PDO::ATTR_PERSISTENT => true,
+            PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION
+        );
+        
+        // Create PDO instance
+        try {
+            $this->conn = new PDO($dsn, $this->user, $this->pass, $options);
+        } catch(PDOException $e) {
+            $this->error = $e->getMessage();
+            echo 'Connection Error: ' . $this->error;
+        }
+    }
+    
+    // Prepare statement with query
+    public function query($sql) {
+        $this->stmt = $this->conn->prepare($sql);
+    }
+    
+    // Bind values to prepared statement using named parameters
+    public function bind($param, $value, $type = null) {
+        if(is_null($type)) {
+            switch(true) {
+                case is_int($value):
+                    $type = PDO::PARAM_INT;
+                    break;
+                case is_bool($value):
+                    $type = PDO::PARAM_BOOL;
+                    break;
+                case is_null($value):
+                    $type = PDO::PARAM_NULL;
+                    break;
+                default:
+                    $type = PDO::PARAM_STR;
+            }
+        }
+        
+        $this->stmt->bindValue($param, $value, $type);
+    }
+    
+    // Execute the prepared statement
+    public function execute() {
+        return $this->stmt->execute();
+    }
+    
+    // Get result set as array of objects
+    public function resultSet() {
+        $this->execute();
+        return $this->stmt->fetchAll(PDO::FETCH_OBJ);
+    }
+    
+    // Get single record as object
+    public function single() {
+        $this->execute();
+        return $this->stmt->fetch(PDO::FETCH_OBJ);
+    }
+    
+    // Get row count
+    public function rowCount() {
+        return $this->stmt->rowCount();
+    }
+    
+    // Get last inserted ID
+    public function lastInsertId() {
+        return $this->conn->lastInsertId();
+    }
+}
+ 
+============================================ 
+FILE: C:\Users\lucia\Desktop\WebProgramming\Assignment6Web\classes\Product.php 
+============================================ 
+<?php
+class Product {
+    private $db;
+    
+    public function __construct() {
+        $this->db = new Database();
+    }
+    
+    // Get all products with pagination
+    public function getProducts($page = 1, $perPage = 4) {
+        $offset = ($page - 1) * $perPage;
+        
+        $this->db->query('SELECT p.*, c.name as category_name 
+                          FROM products p 
+                          JOIN categories c ON p.category_id = c.id 
+                          ORDER BY p.created_at DESC 
+                          LIMIT :offset, :perPage');
+        
+        $this->db->bind(':offset', $offset);
+        $this->db->bind(':perPage', $perPage);
+        
+        return $this->db->resultSet();
+    }
+    
+    // Get products by category with pagination
+    public function getProductsByCategory($categoryId, $page = 1, $perPage = 4) {
+        $offset = ($page - 1) * $perPage;
+        
+        $this->db->query('SELECT p.*, c.name as category_name 
+                          FROM products p 
+                          JOIN categories c ON p.category_id = c.id 
+                          WHERE p.category_id = :category_id 
+                          ORDER BY p.created_at DESC 
+                          LIMIT :offset, :perPage');
+        
+        $this->db->bind(':category_id', $categoryId);
+        $this->db->bind(':offset', $offset);
+        $this->db->bind(':perPage', $perPage);
+        
+        return $this->db->resultSet();
+    }
+    
+    // Get total product count
+    public function getTotalProducts() {
+        $this->db->query('SELECT COUNT(*) as total FROM products');
+        $result = $this->db->single();
+        return $result->total;
+    }
+    
+    // Get total product count by category
+    public function getTotalProductsByCategory($categoryId) {
+        $this->db->query('SELECT COUNT(*) as total FROM products WHERE category_id = :category_id');
+        $this->db->bind(':category_id', $categoryId);
+        $result = $this->db->single();
+        return $result->total;
+    }
+    
+    // Get product by ID
+    public function getProductById($id) {
+        $this->db->query('SELECT p.*, c.name as category_name 
+                          FROM products p 
+                          JOIN categories c ON p.category_id = c.id 
+                          WHERE p.id = :id');
+        $this->db->bind(':id', $id);
+        return $this->db->single();
+    }
+    
+    // Add product
+    public function addProduct($data) {
+        $this->db->query('INSERT INTO products (category_id, name, description, price, image_url, stock) 
+                          VALUES (:category_id, :name, :description, :price, :image_url, :stock)');
+        
+        // Bind values
+        $this->db->bind(':category_id', $data['category_id']);
+        $this->db->bind(':name', $data['name']);
+        $this->db->bind(':description', $data['description']);
+        $this->db->bind(':price', $data['price']);
+        $this->db->bind(':image_url', $data['image_url']);
+        $this->db->bind(':stock', $data['stock']);
+        
+        // Execute
+        if($this->db->execute()) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+    
+    // Update product
+    public function updateProduct($data) {
+        $this->db->query('UPDATE products 
+                          SET category_id = :category_id, 
+                              name = :name, 
+                              description = :description, 
+                              price = :price, 
+                              image_url = :image_url, 
+                              stock = :stock 
+                          WHERE id = :id');
+        
+        // Bind values
+        $this->db->bind(':id', $data['id']);
+        $this->db->bind(':category_id', $data['category_id']);
+        $this->db->bind(':name', $data['name']);
+        $this->db->bind(':description', $data['description']);
+        $this->db->bind(':price', $data['price']);
+        $this->db->bind(':image_url', $data['image_url']);
+        $this->db->bind(':stock', $data['stock']);
+        
+        // Execute
+        if($this->db->execute()) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+    
+    // Delete product
+    public function deleteProduct($id) {
+        $this->db->query('DELETE FROM products WHERE id = :id');
+        // Bind values
+        $this->db->bind(':id', $id);
+        
+        // Execute
+        if($this->db->execute()) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+    
+    // Search products
+    public function searchProducts($keyword, $page = 1, $perPage = 4) {
+        $offset = ($page - 1) * $perPage;
+        $searchTerm = '%' . $keyword . '%';
+        
+        $this->db->query('SELECT p.*, c.name as category_name 
+                          FROM products p 
+                          JOIN categories c ON p.category_id = c.id 
+                          WHERE p.name LIKE :keyword OR p.description LIKE :keyword 
+                          ORDER BY p.created_at DESC 
+                          LIMIT :offset, :perPage');
+        
+        $this->db->bind(':keyword', $searchTerm);
+        $this->db->bind(':offset', $offset);
+        $this->db->bind(':perPage', $perPage);
+        
+        return $this->db->resultSet();
+    }
+    
+    // Get total search results count
+    public function getTotalSearchResults($keyword) {
+        $searchTerm = '%' . $keyword . '%';
+        
+        $this->db->query('SELECT COUNT(*) as total 
+                          FROM products 
+                          WHERE name LIKE :keyword OR description LIKE :keyword');
+        
+        $this->db->bind(':keyword', $searchTerm);
+        $result = $this->db->single();
+        return $result->total;
+    }
+}
+ 
+============================================ 
+FILE: C:\Users\lucia\Desktop\WebProgramming\Assignment6Web\classes\User.php 
+============================================ 
+ 
+============================================ 
+FILE: C:\Users\lucia\Desktop\WebProgramming\Assignment6Web\config\database.php 
+============================================ 
+<?php
+// Database connection credentials
+define('DB_HOST', 'localhost');
+define('DB_USER', 'root'); 
+define('DB_PASS', 'Password-12345');      // Change to your MySQL password
+define('DB_NAME', 'ecommerce_db');
+ 
+============================================ 
+FILE: C:\Users\lucia\Desktop\WebProgramming\Assignment6Web\includes\auth.php 
+============================================ 
+<?php
+session_start();
+
+function isAdminLoggedIn() {
+    return isset($_SESSION['admin_logged_in']) && $_SESSION['admin_logged_in'] === true;
+}
+
+function adminLogin($password) {
+    // Replace with your actual admin password validation logic
+    if ($password === 'admin123') {
+        $_SESSION['admin_logged_in'] = true;
+        return true;
+    }
+    return false;
+}
+
+function adminLogout() {
+    unset($_SESSION['admin_logged_in']);
+    session_destroy();
+}
+?> 
+============================================ 
+FILE: C:\Users\lucia\Desktop\WebProgramming\Assignment6Web\includes\Cart.class.php 
+============================================ 
+<?php
+class Cart {
+    public function __construct() {
+        if (!isset($_SESSION['cart'])) {
+            $_SESSION['cart'] = [];
+        }
+    }
+
+    public function addToCart($productId, $quantity = 1) {
+        if (isset($_SESSION['cart'][$productId])) {
+            $_SESSION['cart'][$productId] += $quantity;
+        } else {
+            $_SESSION['cart'][$productId] = $quantity;
+        }
+    }
+
+    public function removeFromCart($productId) {
+        unset($_SESSION['cart'][$productId]);
+    }
+
+    public function getCartItems() {
+        return $_SESSION['cart'];
+    }
+
+    public function clearCart() {
+        $_SESSION['cart'] = [];
+    }
+}
+?> 
+============================================ 
+FILE: C:\Users\lucia\Desktop\WebProgramming\Assignment6Web\includes\Category.class.php 
+============================================ 
+<?php
+class Category {
+    private $db;
+
+    public function __construct() {
+        $this->db = Database::getInstance();
+    }
+
+    public function getAllCategories() {
+        $stmt = $this->db->query("SELECT * FROM categories");
+        return $stmt->fetchAll();
+    }
+
+    public function getCategory($categoryId) {
+        $stmt = $this->db->prepare("SELECT * FROM categories WHERE category_id = ?");
+        $stmt->execute([$categoryId]);
+        return $stmt->fetch();
+    }
+}
+?> 
+============================================ 
+FILE: C:\Users\lucia\Desktop\WebProgramming\Assignment6Web\includes\db.php 
+============================================ 
+<?php
+class Database {
+    private static $instance = null;
+    private $pdo;
+    
+    private function __construct() {
+        $host = 'localhost';
+        $db   = 'ecommerce';
+        $user = 'root';
+        $pass = '';
+        $charset = 'utf8mb4';
+
+        $dsn = "mysql:host=$host;dbname=$db;charset=$charset";
+        $options = [
+            PDO::ATTR_ERRMODE            => PDO::ERRMODE_EXCEPTION,
+            PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
+            PDO::ATTR_EMULATE_PREPARES   => false,
+        ];
+        try {
+            $this->pdo = new PDO($dsn, $user, $pass, $options);
+        } catch (PDOException $e) {
+            throw new PDOException($e->getMessage(), (int)$e->getCode());
+        }
+    }
+
+    public static function getInstance() {
+        if (!self::$instance) {
+            self::$instance = new Database();
+        }
+        return self::$instance->pdo;
+    }
+}
+?> 
+============================================ 
+FILE: C:\Users\lucia\Desktop\WebProgramming\Assignment6Web\includes\footer.php 
+============================================ 
+</main>
+    <footer>
+        <div class="footer-container">
+            <p>&copy; <?php echo date('Y'); ?> E-Commerce Store</p>
+        </div>
+    </footer>
+    
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
+ 
+============================================ 
+FILE: C:\Users\lucia\Desktop\WebProgramming\Assignment6Web\includes\header.php 
+============================================ 
+<?php
+// Start session if not already started
+if (session_status() == PHP_SESSION_NONE) {
+    session_start();
+}
+
+// Include database config
+require_once 'config/database.php';
+// Include classes
+require_once 'classes/Database.php';
+require_once 'classes/Category.php';
+require_once 'classes/Product.php';
+require_once 'classes/Cart.php';
+
+// Initialize cart to get item count
+$cart = new Cart();
+$cartItemCount = $cart->getCartItemCount();
+
+// Initialize category
+$category = new Category();
+$categories = $category->getCategories();
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Commerce Store</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- You can add more CSS frameworks here if needed -->
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <a href="index.php">E-Commerce Store</a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.php">HomeComponent</a></li>
+                    <li class="dropdown">
+                        <a href="products.php">ProductsComponent</a>
+                        <div class="dropdown-content">
+                            <?php foreach($categories as $cat): ?>
+                                <a href="products.php?category=<?php echo $cat->id; ?>"><?php echo $cat->name; ?></a>
+                            <?php endforeach; ?>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="cart.php">Cart (<?php echo $cartItemCount; ?>)</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+ 
+============================================ 
+FILE: C:\Users\lucia\Desktop\WebProgramming\Assignment6Web\includes\Product.class.php 
+============================================ 
+<?php
+class Product {
+    private $db;
+
+    public function __construct() {
+        $this->db = Database::getInstance();
+    }
+
+    public function getAllProducts($page = 1, $perPage = 4) {
+        $offset = ($page - 1) * $perPage;
+        $stmt = $this->db->prepare("SELECT * FROM products LIMIT :offset, :perPage");
+        $stmt->bindValue(':offset', $offset, PDO::PARAM_INT);
+        $stmt->bindValue(':perPage', $perPage, PDO::PARAM_INT);
+        $stmt->execute();
+        return $stmt->fetchAll();
+    }
+
+    public function getProductsByCategory($categoryId, $page = 1, $perPage = 4) {
+        $offset = ($page - 1) * $perPage;
+        $stmt = $this->db->prepare("SELECT * FROM products WHERE category_id = :categoryId LIMIT :offset, :perPage");
+        $stmt->bindValue(':categoryId', $categoryId, PDO::PARAM_INT);
+        $stmt->bindValue(':offset', $offset, PDO::PARAM_INT);
+        $stmt->bindValue(':perPage', $perPage, PDO::PARAM_INT);
+        $stmt->execute();
+        return $stmt->fetchAll();
+    }
+
+    public function getProductById($productId) {
+        $stmt = $this->db->prepare("SELECT * FROM products WHERE product_id = :productId");
+        $stmt->execute([':productId' => $productId]);
+        return $stmt->fetch();
+    }
+
+    public function addProduct($data) {
+        $stmt = $this->db->prepare("INSERT INTO products (name, description, price, category_id, stock) VALUES (?, ?, ?, ?, ?)");
+        return $stmt->execute([$data['name'], $data['description'], $data['price'], $data['category_id'], $data['stock']]);
+    }
+
+    public function updateProduct($productId, $data) {
+        $stmt = $this->db->prepare("UPDATE products SET name = ?, description = ?, price = ?, category_id = ?, stock = ? WHERE product_id = ?");
+        return $stmt->execute([$data['name'], $data['description'], $data['price'], $data['category_id'], $data['stock'], $productId]);
+    }
+
+    public function deleteProduct($productId) {
+        $stmt = $this->db->prepare("DELETE FROM products WHERE product_id = ?");
+        return $stmt->execute([$productId]);
+    }
+
+    public function getTotalProducts($categoryId = null) {
+        if ($categoryId) {
+            $stmt = $this->db->prepare("SELECT COUNT(*) FROM products WHERE category_id = ?");
+            $stmt->execute([$categoryId]);
+        } else {
+            $stmt = $this->db->query("SELECT COUNT(*) FROM products");
+        }
+        return $stmt->fetchColumn();
+    }
+}
+?> 
+============================================ 
+FILE: C:\Users\lucia\Desktop\WebProgramming\Assignment6Web\includes\products_grid.php 
+============================================ 
+<?php
+// This file is included by the API to return the products grid via AJAX
+// It expects $products, $page, $totalPages, and optionally $categoryId to be defined
+?>
+
+<div class="products-grid">
+    <?php if(!empty($products)): ?>
+        <?php foreach($products as $product): ?>
+            <div class="product-card">
+                <img src="assets/images/<?php echo htmlspecialchars($product->image_url); ?>" alt="<?php echo htmlspecialchars($product->name); ?>">
+                <h3><?php echo htmlspecialchars($product->name); ?></h3>
+                <div class="price">$<?php echo number_format($product->price, 2); ?></div>
+                <div class="category"><?php echo htmlspecialchars($product->category_name); ?></div>
+                <div class="buttons">
+                    <a href="product-details.php?id=<?php echo $product->id; ?>" class="btn">View Details</a>
+                    <button class="btn add-to-cart" data-id="<?php echo $product->id; ?>">Add to Cart</button>
+                </div>
+            </div>
+        <?php endforeach; ?>
+    <?php else: ?>
+        <div class="no-products">No products found.</div>
+    <?php endif; ?>
+</div>
+
+<?php if($totalPages > 1): ?>
+    <div class="pagination">
+        <?php if($page > 1): ?>
+            <a href="#" data-page="<?php echo $page - 1; ?>" <?php echo isset($categoryId) ? 'data-category="'.$categoryId.'"' : ''; ?>>Previous</a>
+        <?php endif; ?>
+        
+        <?php for($i = 1; $i <= $totalPages; $i++): ?>
+            <a href="#" data-page="<?php echo $i; ?>" <?php echo isset($categoryId) ? 'data-category="'.$categoryId.'"' : ''; ?> class="<?php echo $i == $page ? 'active' : ''; ?>"><?php echo $i; ?></a>
+        <?php endfor; ?>
+        
+        <?php if($page < $totalPages): ?>
+            <a href="#" data-page="<?php echo $page + 1; ?>" <?php echo isset($categoryId) ? 'data-category="'.$categoryId.'"' : ''; ?>>Next</a>
+        <?php endif; ?>
+    </div>
+<?php endif; ?>
+ 

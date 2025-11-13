@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width = device-width, initial-scale = 1.0">
+        <title> 
+            DOOM Everywhere: The Ultimate Porting Compendium
+        </title>
+    </head>
+    <body>
+        <header>
+            <h1 style="text-align: center;">
+                DOOM - A Porting Masterclass
+            </h1>
+            <hr>
+            <nav>
+                <ul>
+                    <li> <a href="#introduction"> Introduction </a></li>
+                    <li> <a href="#game-evolution"> Game Evolution</a></li>
+                    <li> <a href="#halloffame"> The DOOM Porting - Hall Of Fame </a></li>
+                    <li> <a href="#closure"> DOOM in Internet Culture </a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <hr>
+            <section id="introduction">
+                <article>
+                    <h2 style="text-align: center;"> 
+                        Introduction
+                    </h2>
+
+                    <table>
+                        <tr>
+                            <td valign="top">
+                                <p><b>DOOM</b> is not merely a game—it's a technical marvel and cultural phenomenon. Since its launch in 1993, DOOM has captivated audiences not only for its groundbreaking gameplay but also for its enduring legacy in the tech community. 
+                                   Its engine has been reimagined and ported to an astonishing variety of devices, from everyday gadgets to highly unconventional platforms.</p>
+                                <p>DOOM's remarkable portability is a testament to the efficiency and elegance of its code. <b>John Carmack's</b> masterful programming ensured that the game remained compact, modular, and adaptable, making it relatively easy to port across an extensive range of devices. Widely regarded as one of the greatest achievements in software development, DOOM's source code—released to the public in 1997—continues to inspire programmers and gaming enthusiasts alike. 
+                                   The decision to open-source such an iconic piece of software was an extraordinary act of generosity, further cementing DOOM's legacy as a foundational work in gaming history.</p>
+                                <p>Over the years, hackers, developers, and enthusiasts have taken on the challenge of adapting DOOM's minimalist yet powerful engine to run on hardware you'd never expect. Whether it's turning an ATM machine into a gaming console or repurposing a digital thermometer, these projects showcase both the robustness of the DOOM engine and the creativity of its community.</p>
+                                <p>This page is a tribute to the spirit of innovation that DOOM has inspired. It highlights the technical challenges overcome during these porting experiments, the unique modifications required to tailor the engine to limited hardware, and the sheer audacity of running a complex game on devices like pregnancy tests, calculators, and even smart refrigerators. 
+                                   In doing so, DOOM continues to push the boundaries of what is possible in both gaming and embedded systems.</p>
+
+                                <hr>
+                                <h3 style="text-align: center;">Iconic Soundtrack<br>
+                                    <b>Composed by:</b> Bobby Prince
+                                </h3>
+            
+                                <table width="100%">
+                                    <tr>
+                                        <td width="50%" valign="bottom" align="center">
+                                            <div>
+                                                <audio controls>
+                                                    <source src="E1M1 - At Doom's Gate.mp3" type="audio/mpeg">
+                                                    <source src="E1M1 - At Doom's Gate.ogg" type="audio/ogg">
+                                                </audio>
+                                                <br>
+                                                <b>At Doom's Gate (E1M1)</b>
+                                            </div>
+                                        </td>
+                                        
+                                        <td width="50%" valign="bottom" align="center">
+                                            <div>
+                                                <audio controls>
+                                                    <source src="E2M3; INTER - Intermission From Doom.mp3" type="audio/mpeg">
+                                                    <source src="E2M3; INTER - Intermission From Doom.ogg" type="audio/ogg">
+                                                </audio>
+                                                <br>
+                                                <b>Intermission From Doom (E2M3)</b>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+
+                            <td valign="top">
+                                <figure>
+                                    <img src="Doom_cover_art.jpg" 
+                                         alt="Original DOOM Cover Art" 
+                                         width="250">
+                                    <figcaption style="text-align: center;">Original 1993 DOOM Cover Art</figcaption>
+                                </figure>
+                            </td>
+                        </tr>
+                    </table>
+                </article>
+            </section>
+            
+            <hr>
+            <section id="game-evolution">
+                <h2 style="text-align: center;">DOOM Game Evolution</h2>
+                
+                <table border="1">
+                  <tr>
+                    <td width="70%">
+                      <h3 style="text-align: center;">The Legacy Continues</h3>
+                      
+                      <svg width="100%" height="80">
+                        <line x1="20" y1="40" x2="90%" y2="40" stroke="#666" stroke-width="2"/>
+                        <circle cx="20" cy="40" r="5" fill="#f00"/>
+                        <text x="20" y="60" fill="#000" font-size="12" text-anchor="start">1993-1996</text>
+                        
+                        <circle cx="30%" cy="40" r="5" fill="#0f0"/>
+                        <text x="30%" y="60" fill="#000" font-size="12" text-anchor="middle">1997-2004</text>
+                        
+                        <circle cx="60%" cy="40" r="5" fill="#00f"/>
+                        <text x="60%" y="60" fill="#000" font-size="12" text-anchor="middle">2016-2020</text>
+                        
+                        <circle cx="90%" cy="40" r="5" fill="#ff0"/>
+                        <text x="90%" y="60" fill="#000" font-size="12" text-anchor="end">2025+</text>
+                      </svg>
+            
+                      <ul>
+                        <li><b>DOOM (1993)</b> - Original MS-DOS version</li>
+                        <li><b>DOOM II (1994)</b> - Added Super Shotgun</li>
+                        <li><b>DOOM 64 (1997)</b> - N64 exclusive</li>
+                        <li><b>DOOM 3 (2004)</b> - Lighting overhaul</li>
+                        <li><b>DOOM (2016)</b> - Modern reboot</li>
+                        <li><b>DOOM Eternal (2020)</b> - Expanded lore</li>
+                        <li><b>DOOM: Dark Ages (2025)</b> - Upcoming prequel</li>
+                      </ul>
+                    </td>
+                    
+                    <td width="55%" style="padding-left: 20px; vertical-align: middle">
+                        <h3 style="text-align: center;">Technical Innovations</h3>
+                        <ul>
+                          <li><b>WAD File Format</b> - Modular game data storage</li>
+                          <li><b>Adaptive Tile Rendering</b> - DOS memory optimization</li>
+                          <li><b>Dynamic Lighting</b> - Revolutionary shadow system</li>
+                          <li><b>Vulkan API Integration</b> - Graphics overhaul</li>
+                          <li><b>Destructible Environments</b> - Physics breakthrough</li>
+                          <li><b>Neural Rendering</b> - AI-driven graphics</li>
+                        </ul>
+                      </td>
+                  </tr>
+                </table>
+            </section>
+
+            <hr>
+            <section id="halloffame">
+                <article>
+                    <h2 style="text-align: center;"><b>The DOOM Porting - Hall Of Fame</b></h2>
+                    <p style="text-align: center;">
+                        <a href="https://en.wikipedia.org/wiki/List_of_Doom_ports" target="_blank">
+                            Full list of DOOM ports
+                        </a>
+                    </p>
+                    
+                    <p><b>1. Unexpected Battlegrounds</b></p>
+                    <ul>
+                        <li>A Digital Camera - Some Canon cameras, using modified firmware</li>
+                        <li>A MacBook Pro Touch Bar - The tiny OLED strip above the keyboard can display DOOM!</li>
+                        <li>An ATM (Automated Teller Machine) - DOOM has been played on ATM screens, using the keypad for controls.</li>
+                        <li>A Samsung Fridge - Innovative hardware adaptation for DOOM.</li>
+                    </ul>
+                    
+                    <p><b>2. Insane Hardware Hacks</b></p>
+                    <ul>
+                        <li>An Oscilloscope</li>
+                        <li>A LEGO Brick (custom-built LEGO CPU)</li>
+                        <li>A Porsche 911 Console</li>
+                    </ul>
+                    
+                    <p><b>3. Meta DOOM: Games Within Games</b></p>
+                    <ul>
+                        <li>Inside Minecraft (using redstone and mods)</li>
+                        <li>Inside DOOM (using a game exploit)</li>
+                        <li>A Potato-powered Computer</li>
+                        <li>A Playable PDF</li>
+                        <li>A Word Document (using VBA macros to render its frames)</li>
+                    </ul>
+
+                    <p><b>4. DOOM Beyond Reality</b></p>
+                    <ul>
+                        <li>
+                            <b>Apple Lightning to HDMI Adapter Port</b> - Recent efforts have shown that DOOM can even run on Apple's Lightning to HDMI adapter by exploiting a checkm8 firmware vulnerability. This port demonstrates the game engine's versatility on unconventional hardware.
+                        <li>
+                            <b>Husqvarna Automower Port</b> - In a surprising twist, DOOM was officially ported to the Husqvarna Automower NERA. The lawnmower's built-in LCD and control wheel let you play DOOM while it's “mowing your lawn”—a testament to everyday machines being hacked into running the classic FPS. <a href="https://github.com/husqvarnagroup/automower-doom" target="_blank">The official Husqvarna Automower(R) port of Doom</a>.
+                        </li>
+                        <li>
+                            <b>Doom on E. coli Cells</b> - MIT graduate student Lauren "Ren" Ramlan engineered a display using luminescent E. coli bacteria arranged in a 32x48 grid, with each bacterium acting as a pixel.
+                        </li>
+                        <li>
+                            <b>Doom on Rat Brain Cells</b> - Researchers interfaced rat brain cells with a computer system to run DOOM, exploring the potential of biological neural networks for processing complex tasks.
+                        </li>
+                        <li>
+                            <b>Doom on a Mars Rover Replica</b> - Enthusiasts modified functional replicas of Mars rovers to run DOOM, demonstrating the game's adaptability to space exploration hardware.
+                        </li>
+                        <li>
+                            <b>Doom on a Pregnancy Test</b> - A developer ingeniously modified the display of a digital pregnancy test to run DOOM, showcasing the game's ability to run on extremely limited hardware.
+                        </li>
+                        <li>
+                            <b>Volumetric Voxel Display</b> - Graphics engineer James Brown developed a crystal-ball-like display that spins a 2D panel to create a 3D (voxel) image, rendering DOOM in true three-dimensional space.
+                        </li>
+                    </ul>
+                    
+                    <div style="display: flex; justify-content: center; gap: 20px;">
+                        <figure>
+                            <video controls width="340">
+                                <source src="Running Doom on cells_ 1080.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                            <figcaption style="text-align: center;">DOOM running on E.Coli Cells</figcaption>
+                        </figure>
+
+                        <figure>
+                            <video controls width="340">
+                                <source src="Finally, Doom On A PDF 1080.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                            <figcaption style="text-align: center;">DOOM running in a PDF file</figcaption>
+                        </figure>
+
+                        <figure>
+                            <video controls width="340">
+                                <source src="@Foon Got Doom Running On A Pregnancy Tester 1080.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                            <figcaption style="text-align: center;">DOOM running on a Pregnancy Test</figcaption>
+                        </figure>
+
+                    </div>
+                </article>
+            </section>
+
+            <aside>
+                <p style="text-align: center; font-style: italic;">
+                    <b>Fun Fact:</b> Did you know that the DOOM engine has been ported to over 40 different devices, proving that with creativity and technical ingenuity, virtually any platform can be transformed into a gaming console?
+                </p>
+            </aside>
+            <hr>
+            
+            <section id = "closure">
+                <h2 style="text-align: center;">DOOM in Internet Culture</h2>
+                <aside>
+                    <p>
+                    The adaptability of the classic 1993 DOOM game has sparked two enduring internet memes:
+                    </p>
+                    <ul>
+                    <li>
+                        <strong>Can it run DOOM?</strong>: This meme humorously questions whether various devices, especially unconventional or underpowered ones, can run DOOM. It showcases the game's versatility and the community's creativity in porting it to a wide array of unexpected platforms.
+                    </li>
+                    <li>
+                        <strong>If it exists, it can run DOOM</strong>: This saying emphasizes the idea that virtually any device, regardless of its primary function or specifications, can be modified to run DOOM. It's a testament to both the game's lightweight design and the ingenuity of enthusiasts.
+                    </li>
+                    </ul>
+                    <p>
+                    These memes highlight the widespread efforts to run DOOM on various devices, from printers and smart refrigerators to digital cameras and even within other games.
+                    </p>
+                </aside>
+            </section>
+
+        </main>
+        
+        <footer>
+            <hr>
+            <section>
+                <article>
+                    <h3 style="text-align: center;">Thank You for Exploring the DOOM Universe!</h3>
+                    <p style="text-align: center;">
+                        We hope you enjoyed this journey through the astonishing world of DOOM porting—where innovation meets pure gaming passion. From digital cameras to bacterial displays, the DOOM legacy continues to defy expectations.
+                    </p>
+                    <p style="text-align: center;">
+                        Stay inspired, keep exploring, and remember: in the world of DOOM, anything is possible!
+                    </p>
+                </article>
+            </section>
+        </footer>
+    </body>
+</html>

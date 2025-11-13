@@ -1,0 +1,108 @@
+.title {
+  text-align: center;
+  font-size: 1.5rem;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-family: 'Roboto', sans-serif;
+  margin-bottom: 80px;
+}
+
+.title-wrapper {
+  margin-bottom: 80px; 
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(135deg, #2c3e50, #4ca1af);
+  background-size: cover;
+  background-position: center;
+}
+
+.container {
+  display: flex;
+  flex-direction: column; 
+  align-items: center;
+  perspective: 1000px;
+}
+
+.cube {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  transform-style: preserve-3d;
+  animation: rotate 20s infinite linear reverse;
+}
+
+.cube-wrapper {
+  position: relative; 
+  width: 200px;
+  height: 200px;
+}
+
+.face {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  background-size: contain;
+  background-position: center;
+  border: 2px solid #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.front {
+  background-image: url('StackOverflow.jpg');
+  transform: translateZ(100px);
+}
+
+.back {
+  background-image: url('ChatGPT.jpg');
+  transform: rotateY(180deg) translateZ(100px);
+}
+
+.right {
+  background-image: url('w3.jpg');
+  transform: rotateY(90deg) translateZ(100px);
+}
+
+.left {
+  background-image: url('Deepseek.jpg');
+  transform: rotateY(-90deg) translateZ(100px);
+}
+
+.top {
+  background-image: url('GFG.jpg');
+  transform: rotateX(90deg) translateZ(100px);
+}
+
+.bottom {
+  background-image: url('LeetCode.jpg');
+  transform: rotateX(-90deg) translateZ(100px);
+}
+
+@keyframes rotate {
+  0% {
+      transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+  }
+  20% {
+      transform: rotateX(360deg) rotateY(0deg) rotateZ(0deg);
+  }
+  40% {
+      transform: rotateX(360deg) rotateY(360deg) rotateZ(0deg); 
+  }
+  60% {
+      transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg) translateZ(-400px);
+  }
+  80% {
+      transform: rotateX(720deg) rotateY(360deg) rotateZ(540deg) translate(100px, -500px);
+  }
+
+  100% {
+      transform: rotateX(720deg) rotateY(540deg) rotateZ(360deg);
+  }
+}
